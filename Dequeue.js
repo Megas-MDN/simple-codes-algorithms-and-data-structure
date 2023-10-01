@@ -28,8 +28,8 @@ export default class Deque {
 
   removeFront() {
     if (this.isEmpty()) return;
-    const element = this.#items[this.#first + 1];
-    delete this.#items[this.#first + 1];
+    const element = this.#items[this.#first];
+    delete this.#items[this.#first];
     this.#first++;
     return element;
   }
@@ -60,3 +60,22 @@ export default class Deque {
     this.#items = [];
   }
 }
+
+function testDeque() {
+  const deque = new Deque();
+
+  console.log(deque.isEmpty()); // true
+  deque.addBack(1, 2, 3);
+  console.log(deque.toString(' ')); // 1 2 3
+  deque.addFront(1, 2, 3);
+  console.log('toString ', deque.toString(' - ')); // 1 - 2 - 3 - 1 - 2 - 3
+  console.log('size ', deque.size()); // 6
+  const d1 = deque.removeBack();
+  const d2 = deque.removeBack();
+  console.log('Empty', deque.isEmpty()); // false
+  console.log(deque.toString(' ')); // 1 2 3 1
+  console.log(d1, d2);
+  console.log(first);
+}
+
+// testDeque();
