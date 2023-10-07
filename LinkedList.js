@@ -85,6 +85,7 @@ class LinkedList {
     return this.#count;
   }
   getHead() {
+    if (this.isEmpty()) return null;
     return JSON.parse(JSON.stringify(this.#head?.element));
   }
   toString(separator = '') {
