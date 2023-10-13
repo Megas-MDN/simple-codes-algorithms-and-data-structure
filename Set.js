@@ -1,4 +1,4 @@
-export default class Sety {
+export default class Set {
   #items;
   constructor() {
     this.#items = {};
@@ -69,9 +69,6 @@ export default class Sety {
 
 const testSet = () => {
   const set = new Set();
-  set.add(1);
-  set.add(2);
-  /*
   set.add(1, 2, 3, 4, 5, 6, 7);
   console.log('Values --> ', set.values(), '<---');
   console.log('Has --> ', set.has(2), '<---');
@@ -93,8 +90,7 @@ const testSet = () => {
   const f = e.diff(d);
   f.log();
   console.log(f.isSubSetOf(e), 'True expected');
-  console.log(f.isSubSetOf(d), 'False expected');*/
-  console.log('Array -->', [...set]);
+  console.log(f.isSubSetOf(d), 'False expected');
 };
 
-testSet();
+// testSet();
