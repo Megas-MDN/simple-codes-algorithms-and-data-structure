@@ -121,6 +121,9 @@ export default class Dictionary {
     }
     return false;
   }
+  log() {
+    console.table(this.#table);
+  }
 }
 
 console.log(`--> ${JSON.stringify({})}`);

@@ -1,13 +1,13 @@
-const fnCompare = (a, b) => a === b;
+export const fnCompare = (a, b) => a === b;
 
-class Node {
+export class Node {
   constructor(element) {
     this.element = element;
     this.next = null;
   }
 }
 
-class LinkedList {
+export default class LinkedList {
   #head;
   #count;
   #equalsFn;
@@ -105,19 +105,23 @@ class LinkedList {
   }
 }
 
-const link = new LinkedList();
-link.push(10);
-link.push(9);
-link.push(8);
-link.push(6);
+const testLinked = () => {
+  const link = new LinkedList();
+  link.push(10);
+  link.push(9);
+  link.push(8);
+  link.push(6);
 
-console.log(link.toString(' <<< '));
-link.insertAt(7, 3);
-console.log(link.toString(' <<< '));
-link.remove(9);
-console.log(link.toString(' <<< '));
-link.pop();
-console.log(link.toString(' <<< '));
-link.insertAt(9, 1);
-console.log(link.toString(' <<< '));
-console.log(link.getHead());
+  console.log(link.toString(' <<< '));
+  link.insertAt(7, 3);
+  console.log(link.toString(' <<< '));
+  link.remove(9);
+  console.log(link.toString(' <<< '));
+  link.pop();
+  console.log(link.toString(' <<< '));
+  link.insertAt(9, 1);
+  console.log(link.toString(' <<< '));
+  console.log(link.getHead());
+};
+
+// testLinked();
