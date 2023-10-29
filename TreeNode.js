@@ -1,11 +1,11 @@
 class Node {
-  #key;
-  #left;
-  #right;
+  key;
+  left;
+  right;
   constructor(key) {
-    this.#key = key;
-    this.#left = null;
-    this.#right = null;
+    this.key = key;
+    this.left = null;
+    this.right = null;
   }
 }
 
